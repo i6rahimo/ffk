@@ -88,11 +88,12 @@ button {
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 75px;
 }
 .header__nav {
   width: 100%;
-
+  padding: 35px 0 0;
 }
 .header__ul {
   display: flex;
@@ -125,12 +126,16 @@ button {
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
+  width: 95%;
 }
 .header__list-phonetext a{
   font-weight: 700;
   font-size: 22px;
   line-height: 30px;  
 }
+
+
+
 .home {
   background-image: url('../img/home-bg.png');
   /* background-position: center; */
@@ -138,4 +143,58 @@ button {
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
+  padding: 213px 0 0;
+  text-align: center;
 }
+
+.home__title {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 48px;
+  color: #fff;
+}
+.home__subtitle {
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 150%;
+  color: #EEEEEE;
+}
+.home__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 56px auto 0;
+  width: 947px;
+  max-width: 100%;
+}
+
+.home__btn {
+  background: linear-gradient(97.14deg, #DE5000 18.45%, #DE5000 18.46%, #FF7324 51.62%, #DE5000 83.44%);
+  box-shadow: 0px 7.01804px 0px #933800, 0px 28.5716px 54.97px -17.6872px rgba(189, 71, 0, 0.5), inset -5px -5px 20px 11px #D64F00, inset 2px 2px 70.76px #FFBE9A;
+  border-radius: 230.88px;
+  padding: 51px 93px;
+  font-weight: 900;
+  font-size: 17.594px;
+  line-height: 16px;
+  text-transform: uppercase;
+  width: 455px;
+  height: 118px;
+  display: block;
+  margin: 0 25px 61px;
+}
+
+.home__content-text {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 120px;
+  text-align: end;
+}
+.home__content-text:nth-child(3), .home__content-text:nth-child(5){
+  text-align: start;
+}
+
