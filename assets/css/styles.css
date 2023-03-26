@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Mont Black', sans-serif;
+  src: local('Mont Black'), 
+  url('../fonts/Mont-Black.woff2') format('woff2'),
+  url('../fonts/Mont-Black.woff') format('woff'),
+  url('../fonts/Mont-Black.ttf') format('ttf'),
+  url('../fonts/Mont-Black.eot') format('eot'),
+}
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --gold-color: #FFC56D;
+
+  --body-font: 'Manrope', sans-serif;
+  /* --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem; */
+
+  /* --font-medium: 500;
+  --font-semi-bold: 600; */
+}
+
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .3s; /* For animation dark mode */
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  font-family: var(--body-font);
+  outline: none;
+  border: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.main {
+  overflow: hidden; 
+}
+
+
+.header {
+  position: absolute;
+  width: 100%;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  width: 100%;
+
+}
+.header__ul {
+  display: flex;
+  justify-content: space-between;
+}
+.header__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.header__link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+.header__list-phone {
+  flex-direction: row;
+}
+.header__list-phone img {
+  width: 44px;
+  height: 47px;
+}
+.header__popup-call {
+  color: #FFB03A;
+  border-bottom: 1px solid #FFB03A;
+  padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+}
+.header__list-phonetext a{
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;  
+}
+.home {
+  background-image: url('../img/home-bg.png');
+  /* background-position: center; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
