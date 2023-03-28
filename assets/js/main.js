@@ -28,7 +28,7 @@ showMenu()
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
-    centeredSlides: true,
+    // centeredSlides: true,
     slidesPerView: 3,
     pagination: {
       el: '.swiper-pagination',
@@ -37,6 +37,18 @@ const swiper = new Swiper('.swiper', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            centeredSlides: false,
+        },
+        480: {            
+            slidesPerView: 3,
+            centeredSlides: true,
+        },
+  
+      }
  });
   
   
