@@ -371,10 +371,49 @@ button {
 }
 
 
-
-
-
-
+.review {
+  background-image: url('../img/review-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.review__title {
+  font-family: 'Mont_black';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 70px;
+  line-height: 150%;
+  margin-top: 144px;
+}
+.swiper-wrapper {
+  margin: 0 0 0 15px;
+}
+.swiper-slide-active img{
+  max-width: 578px;
+  min-height: 885px;
+  margin: -100px 0 0 -80px;
+}
+.swiper-button-prev, .swiper-button-next {
+  width: 48px;
+  height: 48px;
+  background-color: #FFC56D;
+  border-radius: 100%;
+}
+.swiper-button-prev::after {
+  content: url('../img/arrow-slide.svg');
+  transform: rotate(180deg);
+  position: relative;
+  top: 5px;
+}
+.swiper-button-next::after {
+  content: url('../img/arrow-slide.svg');
+  display: block;
+  position: relative;
+  bottom: 5px;
+}
+.swiper-pagination {
+  display: none;
+}
 
 @media (max-width: 1366px) {
   .header__list {
@@ -504,7 +543,29 @@ button {
     width: 108px;
     height: 107px;
   }
-  
+  .review__title {
+    margin: 74px 0 0;
+    font-size: 50.0573px;
+    line-height: 150%;
+  }
+  .swiper {
+    max-width: 1040px;
+  }
+  .swiper-slide img {
+    width: 309px;
+    height: 463px;
+  }
+  .swiper-slide-active img{
+    width: 413px;
+    min-height: 619px;
+    margin: -50px 0 0 -40px;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    width: 34px;
+    height: 34px;
+    background-color: #FFC56D;
+    border-radius: 100%;
+  }
 }
 
 @media (max-width: 1280px)  {
@@ -812,6 +873,34 @@ button {
   .advantages__item:nth-child(6) img {
     width: 81px;
     height: 80px;
+  }
+  .review__title {
+    margin:56px 0 0;
+    font-size: 37.6961px;
+    line-height: 150%;
+  }
+  .swiper {
+    max-width: 800px;
+  }
+  .swiper-slide img {
+    width: 232px;
+    height: 348px;
+  }
+  .swiper-slide-active img{
+    width: 311px;
+    min-height: 466px;
+    margin: -50px 0 0 -40px;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    width: 25px;
+    height: 26px;
+    background-color: #FFC56D;
+    border-radius: 100%;
+  }
+  .swiper-button-prev::after  {
+    width: 5px;
+    height: 10px;
+    top: 20px;
   }
 }
 @media (max-width: 992px)  {
