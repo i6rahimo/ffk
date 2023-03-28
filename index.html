@@ -355,32 +355,36 @@
                         </div>
                         <div class="contacts__email">
                             <p>Почта:</p>
-                            <a href="mailto:mamontgrup@mail.ru">mamontgrup@mail.ru</a>
+                            <a class="contacts__link" href="mailto:mamontgrup@mail.ru">mamontgrup@mail.ru</a>
                         </div>
                         <div class="contacts__phone">
                             <p>Номера для связи:</p>
-                            <a href="tel:+79144806940">+7 914 480-69-40</a>
-                            <a href="tel:+79810462528">+7 981 046-25-28</a>
+                            <a class="contacts__link" href="tel:+79144806940">+7 914 480-69-40</a>
+                            <a class="contacts__link" href="tel:+79810462528">+7 981 046-25-28</a>
                         </div>
                         <div class="contacts__location">
                             <p>Адрес склада:</p>
-                            <span>МО г. Котельники мкр Ковровый 37 склад 309</span>
+                            <span>МО г. Котельники мкр <br> Ковровый 37 склад 309</span>
                         </div>
                         <div class="contacts__social">
-                            <div class="contats__social-whats">
+                            <a class="contats__social-whats">
                                 <img src="assets/img/whats.svg" alt="Ватсапп">
                                 WhatsApp
-                            </div>
-                            <div class="contats__social-whats">
+                            </a>
+                            <a class="contats__social-whats">
                                 <img src="assets/img/telegram.svg" alt="Телеграм">
                                 Telegram
-                            </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="contacts__map"></div>
+                    <div class="contacts__map" id="contacts__map">
+
+                    </div>
                 </div>
             </div>
         </footer>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU">
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
