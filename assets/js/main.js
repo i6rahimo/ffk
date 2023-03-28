@@ -11,3 +11,16 @@ function showPopup() {
     })
 }
 showPopup();
+
+
+
+function showMenu() {
+    const burger = document.querySelector('.header__burger');
+    const menu = document.querySelector('.header__wrapper');
+
+    burger.addEventListener('click', ()=> {
+        menu.classList.toggle('active');
+        burger.classList.toggle('active')
+    })
+}
+showMenu()
