@@ -386,17 +386,27 @@ button {
   font-size: 70px;
   line-height: 150%; 
 }
+.swiper {
+  width: 100%;
+  height:620px;
+  /* margin: 171px 0 15px; */
+}
+
 .swiper-wrapper {
-  margin: 171px  0 15px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 .swiper-slide {
   width: 325px;
   height: 460px;
+  flex-shrink: 1;
 }
 .swiper-slide-active img{
   height: 620px;
   width: 435px;
-  margin: -100px 0 0;
+  /* margin: -75px 0 0; */
 }
 .swiper-button-prev, .swiper-button-next {
   width: 48px;
