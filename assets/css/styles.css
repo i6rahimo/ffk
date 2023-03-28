@@ -673,6 +673,31 @@ button {
   margin: 0;
 }
 
+
+
+.contacts__title {
+  font-family: 'Mont_black';
+  font-size: 50px;
+  line-height: 150%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contacts__content p{
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 135%;
+  color: #3E3E3E;
+}
+
+.contacts__content a {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 135%;
+  color: #0000;
+}
+
+
 @media (max-width: 1366px) {
   .qa {
     max-height: 524px;
