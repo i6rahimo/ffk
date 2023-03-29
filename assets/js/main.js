@@ -105,7 +105,7 @@ const swiper = new Swiper('.swiper', {
 
     
         // console.log(sumProgress);
-        if(contentFirst.classList.contains('visible') && sumPack.value !== '' ) {
+        if(contentFirst.classList.contains('visible') ) {
             contentFirst.classList.remove('visible');
             contentSecond.classList.add('visible');
             p1.classList.remove('visible');
