@@ -387,9 +387,8 @@ button {
   line-height: 150%; 
 }
 .swiper {
-  width: 100%;
-  height:620px;
-  /* margin: 171px 0 15px; */
+  width: 1440px;
+  height: 620px;
 }
 
 .swiper-wrapper {
@@ -596,8 +595,11 @@ button {
   display: flex;
   gap: 25px;
 }
-.calculate__content-first, .calculate__content-second, .calculate__content-third, .calculate__content-four {
-  display: none;
+.calculate__content-first, .calculate__content-second, .calculate__content-third, .calculate__content-four, .calculate__content-five {
+  display: none;  
+}
+.calculate__content-first.visible, .calculate__content-second.visible, .calculate__content-third.visible, .calculate__content-four.visible, .calculate__content-five.visible {
+  display: block;
 }
 .calculate__content-second, .calculate__content-third, .calculate__content-four, .calculate__content-five p{
   font-weight: 500;
@@ -1074,6 +1076,47 @@ button {
 }
 
 @media (max-width: 1200px)  {
+  .calculate__img-text {
+    font-size: 14.7097px;
+    line-height: 150%;
+    max-width: 245px;
+  }
+  .calculate__title {
+    font-size: 31.5208px;
+    line-height: 150%;
+    max-width: 559px;
+  }
+  .calculate__subtitle {
+    font-size: 25.2166px;
+line-height: 34px;
+  }
+  .calculate__wrapper {
+    gap: 14px;
+  }
+  .calculate__form {
+    padding: 47px 14px 20px 61px;
+  }
+  .form__progress-text {
+    font-size: 13.2387px;
+line-height: 18px;
+  }
+  .calculate-btn {
+    width: 227px;
+    height: 58px;
+    padding: 25px 80px;
+    font-size: 17.6177px;
+line-height: 8px;
+  }
+  .calculate__form-btns p {
+    font-size: 13.2387px;
+line-height: 18px;
+  }
+  .form__progress {
+    height: 18px;
+  }
+  .form__progress img {
+    height: 18px;
+  }
   .home {
     height: 671px;
     padding: 134px 0 0;
@@ -1392,6 +1435,20 @@ button {
   }
 }
 @media (max-width: 992px)  {
+  .calculate__form {
+    padding: 39px 12px 17px 50px;
+  }
+  .calculate-btn {
+    width: 188px;
+    padding: 20px 66px;
+    font-size: 14.565px;
+line-height: 7px;
+  }
+  .calculate__form-btns p {
+    font-size: 10.9448px;
+line-height: 15px;
+max-width: 103px;
+  }
   .home {
     height: 556px;
     padding: 111px 0 0;

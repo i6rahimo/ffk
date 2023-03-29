@@ -70,3 +70,37 @@ const swiper = new Swiper('.swiper', {
  }
  
  ymaps.ready(init);
+
+
+
+
+ function calculateForm() {
+    const btn = document.querySelector('.calculate-btn');
+    const contentFirst = document.querySelector('.content__first');
+    const contentSecond = document.querySelector('.content__second');
+    const contentThird = document.querySelector('.content__third');
+    const contentFourt = document.querySelector('.content__four');
+    const contentFive = document.querySelector('.content__five');
+    const sumProgress = document.querySelector('.form__progress-text');
+    const sum = 1;
+    btn.addEventListener('click', (e)=> {
+        // sumProgress.innerHTML = `Вопрос ${sum} из 4`;
+        e.preventDefault();
+
+        sumProgress.innerHTML = `Вопрос ${sum} из 4`;
+        sum++;
+
+        // console.log(sumProgress);
+        if(contentFirst.classList.contains('visible')) {
+            contentFirst.classList.remove('visible');
+            contentSecond.classList.add('visible');
+        } else if(contentSecond.classList.contains('visible')) {
+            contentSecond.classList.remove('visible');
+            contentThird.classList.add('visible');
+        }
+        console.log('erro');
+        
+ })
+}
+
+ calculateForm()
