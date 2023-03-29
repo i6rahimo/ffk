@@ -132,3 +132,31 @@ const swiper = new Swiper('.swiper', {
 }
 
  calculateForm()
+
+ var $owl = $('.loop');
+
+ $owl.owlCarousel({
+   autoplay: true,
+   autoplayHoverPause: true,
+   autoplayTimeout: 4000,
+   autoplaySpeed: 800,
+   center: true,
+   items: 2,
+   stagePadding: 15,
+   loop: true,
+   nav: true,
+   animateOut: 'slide-up',
+   animateIn: 'slide-down',
+
+   responsive: {
+     // breakpoint from 0 up
+     0: {
+       margin: 15,
+       items: 1.3
+     },
+     768: {
+       margin: 50,
+       items: 2
+     }
+   }
+ });
