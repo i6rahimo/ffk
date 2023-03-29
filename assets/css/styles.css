@@ -569,7 +569,9 @@ button {
   display: flex;
   margin: 54px 0 0;
 }
-
+.calculate__form-btns.delete {
+  display: none;
+}
 .calculate__form-btns p {
   font-weight: 400;
   font-size: 21px;

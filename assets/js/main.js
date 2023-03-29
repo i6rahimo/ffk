@@ -79,16 +79,21 @@ const swiper = new Swiper('.swiper', {
     const contentFirst = document.querySelector('.content__first');
     const contentSecond = document.querySelector('.content__second');
     const contentThird = document.querySelector('.content__third');
-    const contentFourt = document.querySelector('.content__four');
+    const contentFour = document.querySelector('.content__four');
     const contentFive = document.querySelector('.content__five');
     const sumProgress = document.querySelector('.form__progress-text');
-    const sum = 1;
+    const btns = document.querySelector('.calculate__form-btns');
+    let sum = 1;
+    sumProgress.innerHTML = `Вопрос ${sum} из 4`;
+
     btn.addEventListener('click', (e)=> {
         // sumProgress.innerHTML = `Вопрос ${sum} из 4`;
         e.preventDefault();
-
-        sumProgress.innerHTML = `Вопрос ${sum} из 4`;
-        sum++;
+        if(sum <= 3) {
+            sum++;
+            sumProgress.innerHTML = `Вопрос ${sum} из 4`;
+        }
+        sum === 4;
 
         // console.log(sumProgress);
         if(contentFirst.classList.contains('visible')) {
@@ -97,8 +102,16 @@ const swiper = new Swiper('.swiper', {
         } else if(contentSecond.classList.contains('visible')) {
             contentSecond.classList.remove('visible');
             contentThird.classList.add('visible');
+        } else if(contentThird.classList.contains('visible')) {
+            contentThird.classList.remove('visible');
+            contentFour.classList.add('visible');
+        } else if(contentFour.classList.contains('visible')) {
+            contentFour.classList.remove('visible');
+            contentFive.classList.add('visible');
+            btns.classList.add('delete')
+        } else  {
+
         }
-        console.log('erro');
         
  })
 }
