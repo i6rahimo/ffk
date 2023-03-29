@@ -86,14 +86,16 @@ const swiper = new Swiper('.swiper', {
           p2 = document.querySelector('.p2'),    
           p3 = document.querySelector('.p3'),    
           p4 = document.querySelector('.p4');    
-
+    const sumPack = document.querySelector('.content__first-input');
+    const addressInput = document.querySelector('.deliver-input');
+    // console.log(sumPack.value);
     const sumProgress = document.querySelector('.form__progress-text');
     const btns = document.querySelector('.calculate__form-btns');
     let sum = 1;
     sumProgress.innerHTML = `Вопрос ${sum} из 4`;
 
+
     btn.addEventListener('click', (e)=> {
-        // sumProgress.innerHTML = `Вопрос ${sum} из 4`;
         e.preventDefault();
         if(sum <= 3) {
             sum++;
@@ -101,12 +103,13 @@ const swiper = new Swiper('.swiper', {
         }
         sum === 4;
 
+    
         // console.log(sumProgress);
-        if(contentFirst.classList.contains('visible')) {
+        if(contentFirst.classList.contains('visible') && sumPack.value !== '' ) {
             contentFirst.classList.remove('visible');
             contentSecond.classList.add('visible');
             p1.classList.remove('visible');
-            p2.classList.add('visible')
+            p2.classList.add('visible');
         } else if(contentSecond.classList.contains('visible')) {
             contentSecond.classList.remove('visible');
             contentThird.classList.add('visible');
