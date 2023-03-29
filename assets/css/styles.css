@@ -490,11 +490,19 @@ button {
   color: #FFFFFF;
 }
 .form__progress {
-  width: 100%;
+  width: 529px;
+  max-width: 100%;
   height: 30px;
   border-radius: 35px;
   background-color: #FFDFAE;
   margin: 0 0 23px;
+  position: relative;
+}
+.progress-inner {
+  display: none;
+}
+.p1.visible, .p2.visible, .p3.visible, .p4.visible {
+  display: block;
 }
 
 .form-input {

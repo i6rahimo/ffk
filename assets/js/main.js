@@ -76,11 +76,17 @@ const swiper = new Swiper('.swiper', {
 
  function calculateForm() {
     const btn = document.querySelector('.calculate-btn');
-    const contentFirst = document.querySelector('.content__first');
-    const contentSecond = document.querySelector('.content__second');
-    const contentThird = document.querySelector('.content__third');
-    const contentFour = document.querySelector('.content__four');
-    const contentFive = document.querySelector('.content__five');
+    const contentFirst = document.querySelector('.content__first'),
+          contentSecond = document.querySelector('.content__second'),
+          contentThird = document.querySelector('.content__third'),
+          contentFour = document.querySelector('.content__four'),
+          contentFive = document.querySelector('.content__five');
+   
+    const p1 = document.querySelector('.p1'),
+          p2 = document.querySelector('.p2'),    
+          p3 = document.querySelector('.p3'),    
+          p4 = document.querySelector('.p4');    
+
     const sumProgress = document.querySelector('.form__progress-text');
     const btns = document.querySelector('.calculate__form-btns');
     let sum = 1;
@@ -99,12 +105,18 @@ const swiper = new Swiper('.swiper', {
         if(contentFirst.classList.contains('visible')) {
             contentFirst.classList.remove('visible');
             contentSecond.classList.add('visible');
+            p1.classList.remove('visible');
+            p2.classList.add('visible')
         } else if(contentSecond.classList.contains('visible')) {
             contentSecond.classList.remove('visible');
             contentThird.classList.add('visible');
+            p2.classList.remove('visible');
+            p3.classList.add('visible')
         } else if(contentThird.classList.contains('visible')) {
             contentThird.classList.remove('visible');
             contentFour.classList.add('visible');
+            p3.classList.remove('visible');
+            p4.classList.add('visible')
         } else if(contentFour.classList.contains('visible')) {
             contentFour.classList.remove('visible');
             contentFive.classList.add('visible');
