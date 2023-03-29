@@ -89,41 +89,48 @@ const swiper = new Swiper('.swiper', {
     const sumPack = document.querySelector('.content__first-input');
     const addressInput = document.querySelector('.deliver-input');
     // console.log(sumPack.value);
+    var step = 1;
     const sumProgress = document.querySelector('.form__progress-text');
+    sumProgress.innerHTML = `Вопрос ${step} из 4`
+    
     const btns = document.querySelector('.calculate__form-btns');
-    let sum = 1;
-    sumProgress.innerHTML = `Вопрос ${sum} из 4`;
-
-
+    
     btn.addEventListener('click', (e)=> {
         e.preventDefault();
-        if(sum <= 3) {
-            sum++;
-            sumProgress.innerHTML = `Вопрос ${sum} из 4`;
-        }
-        sum === 4;
-
+        // let step = 0;
+        // sumProgress.innerHTML = `Вопрос ${step} из 4`;
     
-        // console.log(sumProgress);
-        if(contentFirst.classList.contains('visible') ) {
+    
+        if(sumPack.value === '') {
+            sumPack.classList.add('error')
+        }
+    
+        if(contentFirst.classList.contains('visible') && sumPack.value !== '' ) {
             contentFirst.classList.remove('visible');
             contentSecond.classList.add('visible');
             p1.classList.remove('visible');
             p2.classList.add('visible');
+            step++;
+            sumProgress.innerHTML = `Вопрос ${step} из 4`;
         } else if(contentSecond.classList.contains('visible')) {
             contentSecond.classList.remove('visible');
             contentThird.classList.add('visible');
             p2.classList.remove('visible');
             p3.classList.add('visible')
+            step++;
+            sumProgress.innerHTML = `Вопрос ${step} из 4`
         } else if(contentThird.classList.contains('visible')) {
             contentThird.classList.remove('visible');
             contentFour.classList.add('visible');
             p3.classList.remove('visible');
             p4.classList.add('visible')
+            step++;
+            sumProgress.innerHTML = `Вопрос ${step} из 4`
         } else if(contentFour.classList.contains('visible')) {
             contentFour.classList.remove('visible');
             contentFive.classList.add('visible');
             btns.classList.add('delete')
+
         } else  {
 
         }
@@ -160,3 +167,21 @@ const swiper = new Swiper('.swiper', {
      }
    }
  });
+
+
+
+function checkDeliverAddress() {
+    const input = document.querySelector('.deliver-input');
+    const checkbox = document.querySelector('#deliver-address-input');
+
+    input.addEventListener('click', ()=> {
+        if(!checkbox.hasAttribute("checked")) {
+            checkbox.setAttribute("checked", 'checked');
+        } else {
+            checkbox.setAttribute("checked", 'checked');
+        }
+        console.log(checkbox);
+    })
+
+}
+checkDeliverAddress()

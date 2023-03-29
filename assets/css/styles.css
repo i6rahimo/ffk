@@ -511,6 +511,9 @@ button {
   border-radius: 11px;
   padding: 19px 0 19px 32px;
 }
+.content__first-input.error {
+  outline: 2px solid rgb(227, 0, 0);
+}
 .content__first-input::placeholder {
   font-size: 23.3333px;
   line-height: 32px;
@@ -564,14 +567,64 @@ button {
 }
 .deliver-label {
   position: relative;
-  display: flex;
-  gap: 17px;
-  align-items: center;
   font-weight: 500;
   font-size: 23.3333px;
   line-height: 32px;
   color: #fff;
+  padding: 0 0 0 63px;
 }
+
+.deliver-checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.deliver-address::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+.deliver-checkbox:checked  + .deliver-address::before {
+  content: url('../img/deliver-check.svg');
+}
+
+.checkbox-wrapper {
+  position: relative;
+  padding: 0 0 0 58px;
+}
+
+.checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  left: 0;
+  width: 33px;
+  height: 33px;
+  z-index: 2;
+}
+.checkbox-label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  left: 0;
+  top: 0;
+  width: 33px;
+  height: 33px;
+  background-color: #FFB03A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox:checked + .checkbox-label::before {
+  content: url('../img/check-calc.svg');
+
+} 
 
 .calculate__form-btns {
   display: flex;
