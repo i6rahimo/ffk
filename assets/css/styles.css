@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Mont_black';
-  src: url('../fonts/font/Mont-Black.ttf')
+  src: url('../fonts/Mont-Heavy.woff2')
   /* url('../fonts/Mont-Black.woff2') format('woff2'), */
   /* url('../fonts/Mont-Black.woff') format('woff'),  */
   /* url('../fonts/Mont-Black.ttf') format('ttf'), */
@@ -839,29 +839,32 @@ button {
 
 .cards {
   position: relative;
-  width: 100%;
+  width: 1220px;
   padding: 3em 0;
+  margin: auto;
 }
 
 .card {
   display: flex;
   justify-content: center;
-  height: 466px;
-  width: 329px;
+  height: 466px !important;
+  width: 329px !important;
   margin: 1em 0;
   opacity: 0.7;
   transform: scale(0.87);
   transition: transform 0.4s 0.5s ease-out, opacity 1s ease;
-
   overflow: hidden;
 }
-
-.owl-item.active .card {
+.owl-stage {
+  display: flex;
+}
+.owl-item.active.center  .card{
   width: 440px !important;
   height: 630px !important;
+  /* margin-top: -100px; */
 }
 .owl-dots {
-  /* display: none; */
+  display: none;
 }
 .owl-dot {
 }
@@ -3323,10 +3326,15 @@ max-width: 103px;
     padding: 5px;
     border-radius: 10px;
   }
+  .yandex  {
+    display: inline-flex;
+  }
   .home__content {
     justify-content: flex-start;
   }
-  
+  .home__subtitle {
+    padding: 0 10px;
+  }
   .home__content-text {
     font-size: 22.6545px;
     line-height: 31px;

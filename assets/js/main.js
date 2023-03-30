@@ -153,10 +153,9 @@ const swiper = new Swiper('.swiper', {
    autoplaySpeed: 800,
    center: true,
    items: 2,
-   autoWidth:true,
+   autoWidth:  true,
    stagePadding: 15,
    loop: true,
-   
    nav: true,
    animateOut: 'slide-up',
    animateIn: 'slide-down',
