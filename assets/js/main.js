@@ -26,6 +26,8 @@ function showMenu() {
 showMenu()
 
 const swiper = new Swiper('.swiper', {
+    wrapperClass: 'swiper-wrapper',
+    slideClass: 'swiper-slide',
     direction: 'horizontal',
     loop: true,
     // centeredSlides: true,
@@ -147,7 +149,7 @@ const swiper = new Swiper('.swiper', {
  var $owl = $('.loop');
 
  $owl.owlCarousel({
-   autoplay: true,
+   autoplay: false,
    autoplayHoverPause: true,
    autoplayTimeout: 4000,
    autoplaySpeed: 800,
