@@ -823,7 +823,8 @@ button {
   margin: 49px 0 86px;
 }
 .card,
-.owl-item {
+.owl-item, .clone {
+
   transition: all 1s ease-out;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1, 1);
@@ -845,22 +846,38 @@ button {
 .card {
   display: flex;
   justify-content: center;
-  height: 400px;
+  height: 466px;
+  width: 329px;
   margin: 1em 0;
-  border-radius: 30px;
   opacity: 0.7;
   transform: scale(0.87);
   transition: transform 0.4s 0.5s ease-out, opacity 1s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  background-color: transparent;
+
   overflow: hidden;
 }
 
-.active .card {
-  box-shadow: 0 0px 1em rgba(0, 0, 0, 0.2);
-  transform: box-shadow 0.3s ease, transform 0.1s 0.4s ease-in, opacity 0.4s ease;
+.owl-item.active .card {
+  width: 440px !important;
+  height: 630px !important;
+}
+.owl-dots {
+  /* display: none; */
+}
+.owl-dot {
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 12px !important;
+  height: 12px !important;
+  background: #D1D1D1 !important;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #FFC56D !important;
 }
 
+
+.owl-item .card {
+  width: 329px !important;
+}
 .card__content {
   display: flex;
   align-items: center;
@@ -868,7 +885,9 @@ button {
   color: #fff;
   opacity: 1;
 }
-
+.owl-item.active {
+  width: 329px;
+}
 .active .card__content {
   opacity: 1;
   transition: opacity 0.4s ease;
@@ -2961,9 +2980,12 @@ max-width: 103px;
   .content__first-sum p {
     margin: 0 0 14px;
   }
-  .content__first-sum p, .content-first-deliver p, .content__second p, .content__third p, .content__four p {
+  .content__first-sum p, .content-first-deliver p, .content__second p, .content__third p, .content__four p, ..calculate__content-five p {
     font-size: 22.3809px;
     line-height: 31px;
+  }
+  .calculate__content-five span {
+    font-size: 9px ;
   }
   .checkbox-label {
     font-size: 14px;
@@ -2996,42 +3018,49 @@ max-width: 103px;
     height: 23px;
   }
   .deliver-address-input {
-    max-width: 136px;
-    height: 17px;
-    border-radius: 4px;
+    max-width: 320px;
+    height: 40px;
+    border-radius: 8px;
     padding: 4px 0 4px 7px;
   }
   .deliver-label {
-    padding: 0 0 0 24px;
+    padding: 0 0 0 44px;
   }
   .calculate__form-btns  {
-    gap: 9px;
-    width: 170px;
-    margin: 21px 0 0;
+    gap: 1px;
+    width: 400px;
+    /* max-width: 100%; */
+    margin: 38px 0 0;
   }
   .calculate__form-btns p {
-    font-size: 6.36331px;
-    line-height: 9px;
-    max-width: 60px;
+    font-size: 14.6875px;
+    line-height: 20px;
+    max-width: 138px;
   }
   .calculate-btn {
-    width: 109px;
-    height: 28px;
-    padding: 12px 38px;
-    font-size: 8.46809px;
-    line-height: 4px;
+    width: 252px;
+    height: 65px;
+    padding: 27px 89px;
+    font-size: 19.5456px;
+    line-height: 9px;
     background: linear-gradient(97.14deg, #DE5000 18.45%, #DE5000 18.46%, #FF7324 51.62%, #DE5000 83.44%);
     box-shadow: 0px 1.68616px 0px #933800, 0px 6.86462px 13.2071px -4.24953px rgba(189, 71, 0, 0.5), inset -1.2013px -1.2013px 4.8052px 2.64286px #D64F00, inset 0.48052px 0.48052px 17.0008px #FFBE9A;
-    border-radius: 55.4713px;
+    border-radius: 128px;
   }
 
   .calculate__img {
-    /* width: 22px; */
+    height: 441px;
+    object-fit: cover;
+  }
+  .calculate__img img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0 0 17px 17px;  
   }
   .calculate__img-text {
-    font-size: 7.07034px;
+    font-size: 14.1122px;
     line-height: 150%;
-    max-width: 116px;
+    max-width: 260px;
     margin-left: 10px;
     left: 64px;
     top: 17px;
@@ -3039,23 +3068,21 @@ max-width: 103px;
   }
 
   .checkbox-label {
-    font-size: 9px;
-    transform: translateY(10px);
-    /* margin-top: -45px; */
+    font-size: 14px;
   }
   .checkbox-label::before {
     width: 18px;
     height: 18px;
   }
   .content__second-inputs {
-    gap: 0;
+    gap: 5px;
   }
   .checkbox:checked +  .checkbox-label::before{
     width: 18px;
     height: 18px;
   }
   .checkbox-wrapper {
-    line-height: 90%;
+    line-height: 120%;
     padding: 0 0 0 30px;
   }
   .contacts__title {
