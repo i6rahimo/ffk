@@ -88,7 +88,7 @@ const swiper = new Swiper('.swiper', {
           p4 = document.querySelector('.p4');    
     const sumPack = document.querySelector('.content__first-input');
     const addressInput = document.querySelector('.deliver-input');
-    // console.log(sumPack.value);
+
     var step = 1;
     const sumProgress = document.querySelector('.form__progress-text');
     sumProgress.innerHTML = `Вопрос ${step} из 4`
@@ -101,11 +101,15 @@ const swiper = new Swiper('.swiper', {
         // sumProgress.innerHTML = `Вопрос ${step} из 4`;
     
     
-        if(sumPack.value === '') {
-            sumPack.classList.add('error')
+        if(sumPack.value === '' || addressInput.value === '') {
+            sumPack.classList.add('error');
+            addressInput.classList.add('error')
+        } else {
+            sumPack.classList.remove('error');
+            addressInput.classList.remove('error')    
         }
     
-        if(contentFirst.classList.contains('visible') && sumPack.value !== '' ) {
+        if(contentFirst.classList.contains('visible') && sumPack.value !== '' && addressInput.value !== '') {
             contentFirst.classList.remove('visible');
             contentSecond.classList.add('visible');
             p1.classList.remove('visible');
