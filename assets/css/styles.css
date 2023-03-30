@@ -453,7 +453,7 @@ button {
   line-height: 150%;
   color: #fff;
   max-width: 388px;
-  right: 155px; top: 43px;
+  right: 155px; top: 43px; left: 30px;
   text-align: center;
 }
 .calculate__img img {
@@ -628,7 +628,9 @@ button {
   content: url('../img/check-calc.svg');
 
 } 
-
+.content__second-inputs {
+  margin: 20px 0 0;
+}
 .calculate__form-btns {
   display: flex;
   margin: 54px 0 0;
@@ -1074,7 +1076,7 @@ button {
   .content__first-sum {
     margin: 24px 0 40px;
   }
-  .content__first-sum p, .content-first-deliver p, .content__second p {
+  .content__first-sum p, .content-first-deliver p, .content__second p, .content__third p, .content__four p {
     font-size: 22.8833px;
     line-height: 31px;
   }
@@ -1099,8 +1101,8 @@ button {
     height: 33px;
   }
   .deliver-checkbox:checked  + .deliver-address::before {
-    width: 36px;
-    height: 36px;
+    width: 33px;
+    height: 33px;
   }
   .deliver-address-input {
     height: 41px;
@@ -1538,12 +1540,112 @@ line-height: 18px;
 }
 
 @media (max-width: 1024px)  {
+  .calculate {
 
+  }
+  .calculate__form {
+    padding: 40px 32px 20px 52px;
+  }
+  .calculate__title {
+    font-size: 35.7552px;
+    line-height: 150%;
+    max-width: 635px;
+  }
+  .calculate__subtitle {
+    font-size: 28.6042px;
+    line-height: 39px;
+    margin: 15px auto;
+  }
+  .form__progress-text {
+    font-size: 11.3088px;
+    line-height: 15px;
+  }
+  .form__progress {
+    height: 20px;
+    width: 355px;
+  }
+  .content__first-input {
+    width: 281px;
+    height: 37px;
+  }
+  .content__first-sum {
+    margin: 19px 0 30px;
+  }
+  .content__first-sum p, .content-first-deliver p, .content__second p, .content__third p, .content__four p {
+    font-size: 17.2325px;
+    line-height: 24px;
+  }
+  .checkbox-label {
+    font-size: 14px;
+  }
+  .content-first-deliver p{
+    max-width: 298px;
+    margin: 0;
+  }
+  .content-first-deliver {
+    gap: 17px;
+  }
+  .deliver-label {
+    font-size: 12.5654px;
+    line-height: 17px;
+  }
+  .form__progress {
+    width: 285px;
+  }
+  .form__progress img {
+    height: 20px;
+  }
+  .deliver-address {
+    font-size: 16.6858px;
+    line-height: 23px;
+    width: 33px;
+    height: 33px;
+  }
+  .deliver-address::before {
+    width: 25px;
+    height: 25px;
+  }
+  .deliver-checkbox:checked  + .deliver-address::before {
+    width: 25px;
+    height: 25px;
+  }
+  .deliver-address-input {
+    max-width: 246px;
+    height: 31px;
+    padding: 11px 0 11px 16px;
+  }
+  .deliver-label {
+    padding: 0 0 0 34px;
+  }
+  .calculate__form-btns  {
+    gap: 9px;
+    width: 309px;
+    margin: 29px 0 0;
+  }
+  .calculate__form-btns p {
+    font-size: 11.3088px;
+    line-height: 15px; 
+    max-width: 106px;
+  }
+  .calculate-btn {
+    width: 194px;
+    height: 50px;
+    padding: 20px 68px;
+    font-size: 15.0495px;
+    line-height: 7px;
+  }
+
+  .calculate__img-text {
+    font-size: 12.5654px;
+    line-height: 150%;
+    max-width: 209px;
+    margin-left: 10px;
+  }
   .contacts__title {
     font-size: 26.9258px;
     line-height: 150%;
   }
-
+  
   .contacts__content p{
     font-size: 15.0785px;
     line-height: 135%;
@@ -2054,6 +2156,129 @@ max-width: 103px;
 
 }
 @media (max-width: 768px) {
+  .calculate {
+
+  }
+  .calculate__form {
+    padding: 30px 29px 20px 39px;
+  }
+  .calculate__title {
+    font-size: 35.7552px;
+    line-height: 150%;
+    max-width: 635px;
+  }
+  .calculate__subtitle {
+    font-size: 28.6042px;
+    line-height: 39px;
+    margin: 15px auto;
+  }
+  .form__progress-text {
+    font-size: 8.48006px;
+    line-height: 12px;
+  }
+  .form__progress {
+    height: 20px;
+    width: 355px;
+  }
+  .content__first-input {
+    width: 210px;
+    height: 28px;
+  }
+  .content__first-sum {
+    margin: 13px 0 23px;
+  }
+  .content__first-sum p, .content-first-deliver p, .content__second p, .content__third p, .content__four p {
+    font-size: 12.922px;
+    line-height: 18px;
+  }
+  .checkbox-label {
+    font-size: 14px;
+  }
+  .content-first-deliver p{
+    max-width: 168px;
+    margin: 0;
+  }
+  .content-first-deliver {
+    gap: 13px;
+  }
+  .deliver-label {
+    font-size: 12.5654px;
+    line-height: 17px;
+  }
+  .form__progress {
+    width: 231px;
+    height: 11px;
+  }
+  .form__progress img {
+    height: 11px;
+  }
+  .deliver-address {
+    font-size: 9.42229px;
+    line-height: 13px;
+    width: 33px;
+    height: 33px;
+  }
+  .deliver-address::before {
+    width: 18px;
+    height: 18px;
+  }
+  .deliver-checkbox:checked  + .deliver-address::before {
+    width: 18px;
+    height: 18px;
+  }
+  .deliver-address-input {
+    max-width: 184px;
+    height: 23px;
+    border-radius: 4px;
+    padding: 11px 0 11px 16px;
+  }
+  .deliver-label {
+    padding: 0 0 0 26px;
+  }
+  .calculate__form-btns  {
+    gap: 9px;
+    width: 309px;
+    margin: 29px 0 0;
+  }
+  .calculate__form-btns p {
+    font-size: 8.48006px;
+    line-height: 12px;
+    max-width: 80px;
+  }
+  .calculate-btn {
+    width: 145px;
+    height: 37px;
+    padding: 16px 51px;
+    font-size: 11.285px;
+    line-height: 5px;
+  }
+
+  .calculate__img-text {
+    font-size: 9.42229px;
+    line-height: 150%;
+    max-width: 156px;
+    margin-left: 10px;
+    left: 64px;
+    top: 17px;
+    right: auto;
+  }
+  .checkbox-label {
+    margin-top: -5px;
+  }
+  .checkbox-label::before {
+    width: 18px;
+    height: 18px;
+  }
+  .content__second-inputs {
+    gap: 10px;
+  }
+  .checkbox:checked +  .checkbox-label::before{
+    width: 18px;
+    height: 18px;
+  }
+  .checkbox-wrapper {
+    padding: 0 0 0 30px;
+  }
   .qa {
     max-height: 296px;
   }
